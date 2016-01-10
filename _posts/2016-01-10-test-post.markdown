@@ -1,0 +1,6 @@
+---
+layout : post
+title : test post
+date : 2016-01-10
+---
+it's test post
