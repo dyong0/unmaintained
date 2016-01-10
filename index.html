@@ -3,21 +3,25 @@ layout: default
 ---
 
 <div class="home">
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+        <li>
+            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            <time class="date">On {{ post.date | date: "%b %-d, %Y" }}</time>
+            <p class="preview">{{ post.excerpt | remove : '<p>' | remove : '</p>' }}</p>
+        </li>
+        {% endfor %}
+    </ul>
+    
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a class="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Newer Posts</a>
+        {% endif %}
 
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+        <span class="page-number">Page {{ paginator.page }} of {{paginator.total_pages}}</span>
+        
+        {% if paginator.next_page %}
+        <a class="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts</a>
+        {% endif %}
+    </div>
 </div>
