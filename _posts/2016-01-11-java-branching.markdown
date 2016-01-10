@@ -114,17 +114,17 @@ public abstract class MyAbstractClass{
     } 
 }
 public class Type1 extends MyAbstractClass{
-    Type1(){
+    public Type1(){
         this.type = MyAbstractClass.TYPE1;
     }
 }
 public class Type2 extends MyAbstractClass{
-    Type2(){
+    public Type2(){
         this.type = MyAbstractClass.TYPE2;
     }
 }
 public class Type3 extends MyAbstractClass{
-    Type3(){
+    public Type3(){
         this.type = MyAbstractClass.TYPE3;
     }
 }
