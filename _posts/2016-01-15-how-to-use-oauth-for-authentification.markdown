@@ -9,7 +9,7 @@ tag : [oauth]
 그런데 우리가 일반적으로 생각하는 인증은 `authroization`이 아니라 `authentification`입니다.
 `authentification`은 사용자를 식별하는 것입니다. 그리고 `authroization`은 권한에 대한 허가입니다. 예를 들면, 사용자의 `개인정보 읽기` 권한을 허가 받으면 사용자의 개인정보를 읽을 수 있습니다.
 
-`Oauth`는 `authorization`의 목적으로 만들어졌기 때문에 인증을 하기 위해선 `authorization`을 이용해서 `authentification`을 해야합니다.
+`OAuth`는 `authorization`의 목적으로 만들어졌기 때문에 인증을 하기 위해선 `authorization`을 이용해서 `authentification`을 해야합니다.
 예로 다음과 같은 방법으로 처리할 수 있습니다.
 
 1. **사용자가 시스템에 들어왔을 때**
