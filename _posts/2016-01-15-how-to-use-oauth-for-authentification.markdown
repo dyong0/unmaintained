@@ -1,7 +1,7 @@
 ---
 layout : post
 title : OAuth를 인증으로 쓰는법
-date : 2016-01-16
+date : 2016-01-15
 tag : [oauth]
 ---
 
