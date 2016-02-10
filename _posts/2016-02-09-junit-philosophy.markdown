@@ -1,7 +1,7 @@
 ---
 layout : post
 title : JUnit 철학
-date : 2016-02-10
+date : 2016-02-09
 tag : [java, junit]
 ---
 
