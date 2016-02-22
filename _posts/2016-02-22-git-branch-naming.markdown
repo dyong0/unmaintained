@@ -5,7 +5,6 @@ date : 2016-02-22
 tag : [git, branch, naming, convention]
 ---
 
-# 브랜칭 네이밍
 git에서 추천하는 브랜칭 전략은 release, master, develop, feature, bug, hotfix 총 6가지 prefix로 관리됩니다. 
 다음 그림과 같은 형태입니다.
 
