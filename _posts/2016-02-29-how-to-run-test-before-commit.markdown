@@ -6,8 +6,10 @@ tag : [git, hook, pre-commit]
 ---
 
 ## 사용법
-* ${프로젝트경로}/.git/hooks/pre-commit 파일을 생성합니다. **(실행 권한이 없다면 추가해주세요.)**
-* pre-commit 파일을 아래의 내용으로 채워주세요.
+1. ${프로젝트경로}/.git/hooks/pre-commit 파일을 생성합니다. **(실행 권한이 없다면 추가해주세요.)**
+2. pre-commit 파일을 아래의 내용으로 채워주세요.
+3. 테스트용 커밋을 만들어봅니다. Running mvn clean test라고 뜨면 pre-commit로 작성한 hook이 잘 실행되는겁니다. (테스트가 실패하면 실패에 관한 메세지가 summary만 grep되어 출력됩니다.)
+
 
 ```bash
 #!/bin/bash
@@ -33,11 +35,6 @@ fi
 # go back to current working dir
 cd $CWD
 ```
-
-
-* 테스트용 커밋을 만들어봅니다.
-Running mvn clean test라고 뜨면 pre-commit로 작성한 hook이 잘 실행되는겁니다.
-(테스트가 실패하면 실패에 관한 메세지가 summary만 grep되어 출력됩니다.)
 
 ## 경고
 로컬에서 돌리는 테스트가 느릴 경우, 매 커밋마다 기다리는 시간이 길어질 수도 있습니다.
