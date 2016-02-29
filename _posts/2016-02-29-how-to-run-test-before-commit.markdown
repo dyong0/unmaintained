@@ -34,6 +34,7 @@ fi
 cd $CWD
 ```
 
+
 * 테스트용 커밋을 만들어봅니다.
 Running mvn clean test라고 뜨면 pre-commit로 작성한 hook이 잘 실행되는겁니다.
 (테스트가 실패하면 실패에 관한 메세지가 summary만 grep되어 출력됩니다.)
