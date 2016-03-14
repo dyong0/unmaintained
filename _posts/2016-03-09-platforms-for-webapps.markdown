@@ -14,6 +14,7 @@ Spring은 확장성이 매우 뛰어나서 웹 개발에서는 Spring-mvc를 적
 
 ## 다른 플랫폼에서는 webapp을 어떻게 만드는가
 한 예로, Python을 사용하는 곳에서는 Flask라는 프레임워크가 있습니다. 간단히 예제를 한번 보시죠.
+
 ```python
 from flask import Flask
 app = Flask(__name__)
@@ -25,10 +26,12 @@ def hello_world():
 if __name__ == '__main__':
     app.run()
 ```
+
 ```sh
 $ python hello.py
  * Running on http://127.0.0.1:5000/
 ```
+
 이렇게 짧고 명쾌한 코드로도 webapp을 만들 수 있습니다. Java를 사용하는 환경이었다면 상상도 못했을 분량이죠. Flask에 대해 공부해보고 싶으시다면 다음 링크를 참조해보세요.
 http://flask-docs-kr.readthedocs.org/ko/latest/
 
@@ -42,7 +45,9 @@ js는 front-end 개발에 관심이 높아지던 시기에 nodejs의 등장과 �
 - root(/)경로로 접근하면 "my resource"를 응답으로 보내줍니다.
 
 ## 개발
+
 ### 코드
+
 ```javascript
 var express = require('express');
 var app = express();
@@ -55,19 +60,27 @@ app.get('/', function (req, res) {
 
 app.listen(3000);
 ```
+
 ### 실행
+
 ```shell
 $ node app.js
 ```
 
 # js webapp vs Java webapp
+
 위에서 만든 js webapp을 Java+Spring+mvc를 사용해 만든 것과 비교해보세요.
+
 ## js webapp
+
 ### 사전 준비
+
 ``` shell
 $ npm install express --save
 ```
+
 ### 코드
+
 ```javascript
 var express = require('express');
 var app = express();
@@ -80,16 +93,21 @@ app.get('/', function (req, res) {
 
 app.listen(3000);
 ```
+
 ### 실행
+
 ```shell
 $ node app.js
 ```
 
 ## Java webapp
+
 ### 사전준비
+
 ```shell
 $ yum install tomcat7 tomcat7-admin-webapps tomcat7-webapps
 ```
+
 ```xml
 <!-- web.xml -->
 <web-app>
@@ -156,6 +174,7 @@ $ yum install tomcat7 tomcat7-admin-webapps tomcat7-webapps
 ```
 
 ### 코드
+
 ``` java
 package test;
 
@@ -172,6 +191,7 @@ public class TestController{
 ```
 
 ### 실행
+
 ```shell
 $ mvn tomcat7:run
 ```
